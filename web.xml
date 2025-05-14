@@ -1,0 +1,31 @@
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <display-name>LibraryManagementSystem</display-name>
+
+   <servlet>
+    <servlet-name>BookListServlet</servlet-name>
+    <servlet-class>BookListServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+    <servlet-name>BookListServlet</servlet-name>
+    <url-pattern>/bookList</url-pattern>
+</servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteServlet</servlet-name>
+        <servlet-class>com.library.servlet.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteServlet</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>bookList.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
